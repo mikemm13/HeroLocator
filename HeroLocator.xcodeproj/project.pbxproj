@@ -21,6 +21,11 @@
 		49F60B60196E782A0038989E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60B42196E782A0038989E /* UIKit.framework */; };
 		49F60B68196E782A0038989E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B66196E782A0038989E /* InfoPlist.strings */; };
 		49F60B6A196E782A0038989E /* HeroLocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F60B69196E782A0038989E /* HeroLocatorTests.m */; };
+		49F60B74196E78400038989E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60B73196E78400038989E /* CoreLocation.framework */; };
+		49F60B79196E8A850038989E /* santa.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B75196E8A850038989E /* santa.jpeg */; };
+		49F60B7A196E8A850038989E /* clint.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B76196E8A850038989E /* clint.jpeg */; };
+		49F60B7B196E8A850038989E /* chiquito.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B77196E8A850038989E /* chiquito.jpeg */; };
+		49F60B7C196E8A850038989E /* putin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B78196E8A850038989E /* putin.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		49F60B65196E782A0038989E /* HeroLocatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeroLocatorTests-Info.plist"; sourceTree = "<group>"; };
 		49F60B67196E782A0038989E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49F60B69196E782A0038989E /* HeroLocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroLocatorTests.m; sourceTree = "<group>"; };
+		49F60B73196E78400038989E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		49F60B75196E8A850038989E /* santa.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = santa.jpeg; sourceTree = "<group>"; };
+		49F60B76196E8A850038989E /* clint.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clint.jpeg; sourceTree = "<group>"; };
+		49F60B77196E8A850038989E /* chiquito.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chiquito.jpeg; sourceTree = "<group>"; };
+		49F60B78196E8A850038989E /* putin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = putin.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F60B74196E78400038989E /* CoreLocation.framework in Frameworks */,
 				49F60B41196E782A0038989E /* CoreGraphics.framework in Frameworks */,
 				49F60B43196E782A0038989E /* UIKit.framework in Frameworks */,
 				49F60B3F196E782A0038989E /* Foundation.framework in Frameworks */,
@@ -101,6 +112,7 @@
 		49F60B3D196E782A0038989E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49F60B73196E78400038989E /* CoreLocation.framework */,
 				49F60B3E196E782A0038989E /* Foundation.framework */,
 				49F60B40196E782A0038989E /* CoreGraphics.framework */,
 				49F60B42196E782A0038989E /* UIKit.framework */,
@@ -113,6 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				49F60B4D196E782A0038989E /* AppDelegate.h */,
+				49F60B75196E8A850038989E /* santa.jpeg */,
+				49F60B76196E8A850038989E /* clint.jpeg */,
+				49F60B77196E8A850038989E /* chiquito.jpeg */,
+				49F60B78196E8A850038989E /* putin.jpeg */,
 				49F60B4E196E782A0038989E /* AppDelegate.m */,
 				49F60B50196E782A0038989E /* Main.storyboard */,
 				49F60B53196E782A0038989E /* ViewController.h */,
@@ -229,8 +245,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F60B57196E782A0038989E /* Images.xcassets in Resources */,
+				49F60B7B196E8A850038989E /* chiquito.jpeg in Resources */,
+				49F60B79196E8A850038989E /* santa.jpeg in Resources */,
+				49F60B7C196E8A850038989E /* putin.jpeg in Resources */,
 				49F60B49196E782A0038989E /* InfoPlist.strings in Resources */,
 				49F60B52196E782A0038989E /* Main.storyboard in Resources */,
+				49F60B7A196E8A850038989E /* clint.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
