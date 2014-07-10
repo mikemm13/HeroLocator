@@ -8,11 +8,13 @@
 
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
+#import "Bar.h"
 
 @interface MapViewController () <UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (strong, nonatomic) NSArray *bars;
 @end
 
 @implementation MapViewController
@@ -22,10 +24,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Bars" ofType:@"plist"];
+    _bars = [[NSArray alloc] initWithContentsOfFile:filePath];
+    
+    for (NSDictionary *dictionary in self.bars) {
+        Bar *bar = [[Bar alloc] init];
+        CLLocationDegrees latitude = [(NSNumber *)dictionary[@"latitude"] doubleValue];
+        CLLocationDegrees longitude = [(NSNumber *)dictionary[@"longitude"] doubleValue];
+        bar.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+        [self.mapView addAnnotation:bar];
+    }
 }
 
 - (IBAction)centerMap:(id)sender {
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.location.coordinate, 2000, 2000);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 2000, 2000);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:YES];
     

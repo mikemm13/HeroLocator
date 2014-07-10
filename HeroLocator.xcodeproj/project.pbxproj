@@ -28,6 +28,8 @@
 		49F60B7C196E8A850038989E /* putin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B78196E8A850038989E /* putin.jpeg */; };
 		49F60B7F196E9C720038989E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F60B7E196E9C720038989E /* MapViewController.m */; };
 		49F60B81196E9C880038989E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60B80196E9C880038989E /* MapKit.framework */; };
+		49F60B84196EAD1C0038989E /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F60B83196EAD1C0038989E /* Bar.m */; };
+		49F60B86196EAE000038989E /* Bars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B85196EAE000038989E /* Bars.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,9 @@
 		49F60B7D196E9C720038989E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		49F60B7E196E9C720038989E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		49F60B80196E9C880038989E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		49F60B82196EAD1C0038989E /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
+		49F60B83196EAD1C0038989E /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
+		49F60B85196EAE000038989E /* Bars.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bars.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,8 @@
 				49F60B45196E782A0038989E /* Supporting Files */,
 				49F60B7D196E9C720038989E /* MapViewController.h */,
 				49F60B7E196E9C720038989E /* MapViewController.m */,
+				49F60B82196EAD1C0038989E /* Bar.h */,
+				49F60B83196EAD1C0038989E /* Bar.m */,
 			);
 			path = HeroLocator;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 				49F60B47196E782A0038989E /* InfoPlist.strings */,
 				49F60B4A196E782A0038989E /* main.m */,
 				49F60B4C196E782A0038989E /* HeroLocator-Prefix.pch */,
+				49F60B85196EAE000038989E /* Bars.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				49F60B7B196E8A850038989E /* chiquito.jpeg in Resources */,
 				49F60B79196E8A850038989E /* santa.jpeg in Resources */,
 				49F60B7C196E8A850038989E /* putin.jpeg in Resources */,
+				49F60B86196EAE000038989E /* Bars.plist in Resources */,
 				49F60B49196E782A0038989E /* InfoPlist.strings in Resources */,
 				49F60B52196E782A0038989E /* Main.storyboard in Resources */,
 				49F60B7A196E8A850038989E /* clint.jpeg in Resources */,
@@ -280,6 +289,7 @@
 			files = (
 				49F60B55196E782A0038989E /* ViewController.m in Sources */,
 				49F60B4F196E782A0038989E /* AppDelegate.m in Sources */,
+				49F60B84196EAD1C0038989E /* Bar.m in Sources */,
 				49F60B4B196E782A0038989E /* main.m in Sources */,
 				49F60B7F196E9C720038989E /* MapViewController.m in Sources */,
 			);
