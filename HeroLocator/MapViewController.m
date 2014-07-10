@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
     self.searchTextField.delegate = self;
+    
     // Do any additional setup after loading the view.
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Bars" ofType:@"plist"];
     _bars = [[NSArray alloc] initWithContentsOfFile:filePath];
@@ -34,6 +35,7 @@
         CLLocationDegrees latitude = [(NSNumber *)dictionary[@"latitude"] doubleValue];
         CLLocationDegrees longitude = [(NSNumber *)dictionary[@"longitude"] doubleValue];
         bar.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+        bar.type = [dictionary[@"type"] intValue];
         [self.mapView addAnnotation:bar];
         
     }
@@ -130,6 +132,44 @@
         }
         
     }];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    MKAnnotationView *mkView;
+    mkView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"myBars"];
+    
+    if (!mkView) {
+        mkView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myBars"];
+    }
+    
+    if ([annotation isKindOfClass:[Bar class]]) {
+        Bar *bar = (Bar *) annotation;
+        
+        [mkView setCanShowCallout:YES];
+    
+        
+        switch (bar.type) {
+            case classic_bar:
+                
+                mkView.image = [UIImage imageNamed:@"21-skull"];
+                break;
+            case discoteque:
+                mkView.image = [UIImage imageNamed:@"21-skull"];
+
+                break;
+            case piano_bar:
+                mkView.image = [UIImage imageNamed:@"21-skull"];
+
+                break;
+            case tapas_bar:
+                mkView.image = [UIImage imageNamed:@"21-skull"];
+
+                break;
+            default:
+                break;
+        }
+    }
+    return mkView;
 }
 
 

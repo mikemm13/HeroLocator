@@ -30,6 +30,7 @@
 		49F60B81196E9C880038989E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60B80196E9C880038989E /* MapKit.framework */; };
 		49F60B84196EAD1C0038989E /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F60B83196EAD1C0038989E /* Bar.m */; };
 		49F60B86196EAE000038989E /* Bars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B85196EAE000038989E /* Bars.plist */; };
+		49F60B88196EEF800038989E /* 21-skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B87196EEF800038989E /* 21-skull.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		49F60B82196EAD1C0038989E /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 		49F60B83196EAD1C0038989E /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 		49F60B85196EAE000038989E /* Bars.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bars.plist; sourceTree = "<group>"; };
+		49F60B87196EEF800038989E /* 21-skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "21-skull.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		49F60B44196E782A0038989E /* HeroLocator */ = {
 			isa = PBXGroup;
 			children = (
+				49F60B87196EEF800038989E /* 21-skull.png */,
 				49F60B4D196E782A0038989E /* AppDelegate.h */,
 				49F60B75196E8A850038989E /* santa.jpeg */,
 				49F60B76196E8A850038989E /* clint.jpeg */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F60B57196E782A0038989E /* Images.xcassets in Resources */,
+				49F60B88196EEF800038989E /* 21-skull.png in Resources */,
 				49F60B7B196E8A850038989E /* chiquito.jpeg in Resources */,
 				49F60B79196E8A850038989E /* santa.jpeg in Resources */,
 				49F60B7C196E8A850038989E /* putin.jpeg in Resources */,

@@ -9,5 +9,12 @@
 #import "Bar.h"
 
 @implementation Bar
+-(NSString *)title{
+    return self.name;
+}
+
+- (void)setTitle:(NSString *)newTitle {
+    self.name = newTitle;
+}
 
 @end

@@ -9,6 +9,8 @@
 		<real>40.412541</real>
 		<key>longitude</key>
 		<real>-3.700544</real>
+		<key>type</key>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -17,6 +19,8 @@
 		<real>40.411626</real>
 		<key>longitude</key>
 		<real>-3.700544</real>
+		<key>type</key>
+		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -25,6 +29,8 @@
 		<real>40.411718</real>
 		<key>longitude</key>
 		<real>-3.69002</real>
+		<key>type</key>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -33,6 +39,8 @@
 		<real>40.3417</real>
 		<key>longitude</key>
 		<real>-3.6900003</real>
+		<key>type</key>
+		<integer>3</integer>
 	</dict>
 </array>
 </plist>
