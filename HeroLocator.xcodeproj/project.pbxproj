@@ -26,6 +26,8 @@
 		49F60B7A196E8A850038989E /* clint.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B76196E8A850038989E /* clint.jpeg */; };
 		49F60B7B196E8A850038989E /* chiquito.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B77196E8A850038989E /* chiquito.jpeg */; };
 		49F60B7C196E8A850038989E /* putin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F60B78196E8A850038989E /* putin.jpeg */; };
+		49F60B7F196E9C720038989E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F60B7E196E9C720038989E /* MapViewController.m */; };
+		49F60B81196E9C880038989E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60B80196E9C880038989E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		49F60B76196E8A850038989E /* clint.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clint.jpeg; sourceTree = "<group>"; };
 		49F60B77196E8A850038989E /* chiquito.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chiquito.jpeg; sourceTree = "<group>"; };
 		49F60B78196E8A850038989E /* putin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = putin.jpeg; sourceTree = "<group>"; };
+		49F60B7D196E9C720038989E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		49F60B7E196E9C720038989E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		49F60B80196E9C880038989E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F60B81196E9C880038989E /* MapKit.framework in Frameworks */,
 				49F60B74196E78400038989E /* CoreLocation.framework in Frameworks */,
 				49F60B41196E782A0038989E /* CoreGraphics.framework in Frameworks */,
 				49F60B43196E782A0038989E /* UIKit.framework in Frameworks */,
@@ -112,6 +118,7 @@
 		49F60B3D196E782A0038989E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49F60B80196E9C880038989E /* MapKit.framework */,
 				49F60B73196E78400038989E /* CoreLocation.framework */,
 				49F60B3E196E782A0038989E /* Foundation.framework */,
 				49F60B40196E782A0038989E /* CoreGraphics.framework */,
@@ -135,6 +142,8 @@
 				49F60B54196E782A0038989E /* ViewController.m */,
 				49F60B56196E782A0038989E /* Images.xcassets */,
 				49F60B45196E782A0038989E /* Supporting Files */,
+				49F60B7D196E9C720038989E /* MapViewController.h */,
+				49F60B7E196E9C720038989E /* MapViewController.m */,
 			);
 			path = HeroLocator;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 				49F60B55196E782A0038989E /* ViewController.m in Sources */,
 				49F60B4F196E782A0038989E /* AppDelegate.m in Sources */,
 				49F60B4B196E782A0038989E /* main.m in Sources */,
+				49F60B7F196E9C720038989E /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
