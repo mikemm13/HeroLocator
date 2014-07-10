@@ -86,7 +86,7 @@
                                 <rect key="frame" x="20" y="65" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999999999999991" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSs-Bx-Ga5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -103,6 +103,12 @@
                                             <action selector="changeView:" destination="MWD-UI-vpM" id="hOH-rA-RlS"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" id="bhx-d0-XYH">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="pYj-3h-HRW">
+                                            <rect key="frame" x="255" y="7" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -110,6 +116,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="s7j-fp-RQr"/>
                     <connections>
+                        <outlet property="barsSwitch" destination="pYj-3h-HRW" id="QNL-PJ-o7i"/>
                         <outlet property="mapView" destination="MpM-zx-YMU" id="SCW-fM-gqm"/>
                         <outlet property="searchTextField" destination="HW6-yD-D0J" id="U94-8X-l7b"/>
                     </connections>
