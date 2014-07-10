@@ -25,6 +25,11 @@
 }
 
 - (IBAction)centerMap:(id)sender {
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.location.coordinate, 2000, 2000);
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+    [self.mapView setRegion:adjustedRegion animated:YES];
+    
+    
 }
 
 - (IBAction)changeView:(id)sender {
