@@ -15,8 +15,9 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *barsSwitch;
-@property (strong, nonatomic) NSArray *bars;
+@property (strong, nonatomic) NSMutableArray *bars;
 @property (strong, nonatomic) CLLocation *selectedLocation;
+@property (strong, nonatomic) NSMutableArray *cameras;
 @end
 
 @implementation MapViewController
@@ -29,16 +30,17 @@
     
     // Do any additional setup after loading the view.
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Bars" ofType:@"plist"];
-    _bars = [[NSArray alloc] initWithContentsOfFile:filePath];
+    NSArray *barsFromFile = [NSArray arrayWithContentsOfFile:filePath];
+    _bars = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *dictionary in self.bars) {
+    for (NSDictionary *dictionary in barsFromFile) {
         Bar *bar = [[Bar alloc] init];
         CLLocationDegrees latitude = [(NSNumber *)dictionary[@"latitude"] doubleValue];
         CLLocationDegrees longitude = [(NSNumber *)dictionary[@"longitude"] doubleValue];
         bar.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
         bar.type = [dictionary[@"type"] intValue];
         [self.mapView addAnnotation:bar];
-        
+        [_bars addObject:bar];
     }
 }
 
@@ -195,9 +197,37 @@
         }
     }];
     
-    
 }
 
+- (void)addCameraUsingBar:(Bar *)bar{
+    MKMapCamera *camera = [MKMapCamera cameraLookingAtCenterCoordinate:bar.coordinate fromEyeCoordinate:bar.coordinate eyeAltitude:500];
+    [camera setPitch:60];
+    
+    [self.cameras addObject:camera];
+}
 
+- (IBAction)fly:(id)sender{
+    self.cameras = [[NSMutableArray alloc] init];
+    for (Bar *b in self.bars) {
+        [self addCameraUsingBar:b];
+    }
+    [self goToNextCamera];
+}
+
+- (void)goToNextCamera{
+    if ([self.cameras count] == 0) {
+        return;
+    }
+    MKMapCamera *nextCamera = [self.cameras firstObject];
+    [self.cameras removeObjectAtIndex:0];
+    
+    [UIView animateWithDuration:2.5 delay:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [self.mapView setCamera:nextCamera];
+    } completion:^(BOOL finished){
+        [self goToNextCamera];
+    }];
+    
+    
+}
 
 @end
