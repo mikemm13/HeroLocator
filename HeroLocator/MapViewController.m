@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *barsSwitch;
 @property (strong, nonatomic) NSArray *bars;
+@property (strong, nonatomic) CLLocation *selectedLocation;
 @end
 
 @implementation MapViewController
@@ -170,6 +171,31 @@
         }
     }
     return mkView;
+}
+
+- (IBAction)mapTouch:(id)sender{
+    UITapGestureRecognizer *tap = (UITapGestureRecognizer *)sender;
+    CGPoint tapPoint = [tap locationInView:self.mapView];
+    CLLocationCoordinate2D coord = [self.mapView convertPoint:tapPoint toCoordinateFromView:self.mapView];
+    self.selectedLocation = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
+    [self reverseGeocodeLocation];
+}
+
+- (void)reverseGeocodeLocation{
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:self.selectedLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (placemarks.count) {
+            NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
+            NSMutableString *s = [NSMutableString stringWithFormat:@"$%@", [dictionary valueForKey:@"Street"]];
+            [s appendString:[dictionary valueForKey:@"City"]];
+            [s appendString:[dictionary valueForKey:@"State"]];
+            [s appendString:[dictionary valueForKey:@"ZIP"]];
+            
+            self.searchTextField.text = s;
+        }
+    }];
+    
+    
 }
 
 
